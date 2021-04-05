@@ -1,0 +1,46 @@
+
+
+/* BLOC PAGE */
+
+#bloc_page {
+	width: 900px;
+	margin:50px;
+}
+
+a {
+	text-decoration: none
+}
+/** HEADER **/
+
+header {
+	display: flex;
+}
+/* logo */
+
+#logo_reservia img {
+	width: 70px;
+	height: 30px;
+}
+
+/* nav */
+
+/** BODY **/
+
+/* titre */
+
+/* FILTRES */
+
+/* HEBERGEMENTS */
+/* hebergements recherchés */
+
+#hebergement img {
+	width: 30%;
+	height: 30%;
+}
+/* hebergements populaires */
+
+
+/* ACTIVITES */
+
+/** FOOTER **/
+
