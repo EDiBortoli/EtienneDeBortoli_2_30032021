@@ -276,9 +276,7 @@ input {
 #resultat_hebergements {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: top;
-	flex-direction: row;
-	overflow: hidden;
+	justify-content: center;
 }
 
 #hebergement_recherche {
@@ -302,23 +300,13 @@ input {
 	font-weight: bolder;
 }
 
-
 #hebergement_recherche ul {
 	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
-	vertical-align: top;
 	justify-content: center;
 	padding: 0 5px 0 25px;
 	margin: 20px 0px 10px 0px;
-
-}
-
-#hebergement_recherche img {
-	position: relative;
-	max-width: 20%;
-	min-height: 10%;
-	border-radius: 15px;
 }
 
 #hebergement_recherche li {
@@ -339,33 +327,47 @@ input {
 }
 
 .resultat_hebergement {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	bottom:10%;
 	height: 170px;
 	background-color: white;
-	position: relative;
 	overflow: hidden;
 	box-shadow: -1px -1px 15px 1px #D2D2D2;
 	border-radius: 15px;
 	border: 4px solid #FFFFFF;
 }
 
-
-.bloc_hebergement {
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	position: relative;
-	height: 110px;
+.resultat_hebergement img {
+	width: 100%;
+	height: auto;
+	box-sizing: inherit;
+	min-width: 100%;
+	object-fit: cover;
+	overflow: hidden;
 }
 
 .resultat_hebergement_description {
-	position: absolute;
+	position: relative;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	width: 100%;
-	height: 0%;
 	background-color: white;
 	color: black;
 	font-size: small;
-	bottom:0;
 	padding: 10px 0px 0px 10px;
+}
+
+.etoiles {
+	letter-spacing: -1px;
+}
+
+.resultat_hebergement_description .etoiles {
+
 }
 
 /* hebergements populaires */
@@ -400,6 +402,8 @@ input {
 }
 
 .resultat_populaire {
+	display: flex;
+	flex-direction: row;
 	height: 110px;
 	background-color: white;
 	position: relative;
@@ -410,12 +414,11 @@ input {
 	border: 4px solid #FFFFFF;
 }
 
-.bloc_populaire {
-	background-size: contain;
-	background-position: left;
-	background-repeat: no-repeat;
-	position: relative;
-	height: 110px;
+.resultat_populaire img{
+	height: 100%;
+	box-sizing: inherit;
+	object-fit: cover;
+	overflow: hidden;
 }
 
 .bloc_populaire_description {
@@ -429,15 +432,6 @@ input {
 	padding: 10px 0px 0px 15px;
 }
 
-.etoiles {
-	letter-spacing: -1px;
-}
-
-.resultat_hebergement_description .etoiles {
-	position: absolute;
-	top: 520%;
-}
-
 .bloc_populaire_description .etoiles {
 	position: absolute;
 	bottom: 12%;
@@ -445,69 +439,77 @@ input {
 
 /* ACTIVITES */
 
+#activites {
+}
+
 #elements_activites {
-	display: flex;
-	flex-wrap: wrap;
-	min-width: 200px;
-	height: 310px;
 	margin-top: 20px;
 	background-color: white;
 	border-radius: 15px;
+	overflow: hidden;
 }
 
-#elements_activites img {
-	width: auto;
+table {
+	width: inherit;
+}
+
+td {
 	height: 100%;
-	min-width: 100%;
+	padding: 15px;
+}
+
+
+#elements_activites img {
+	width: 100%; 
+	box-sizing: inherit;
 	object-fit: cover;
 }
+
+.element:nth-child(1) {
+	width: 100%;
+	height: 100%;
+}
+
+.element:nth-child(2) {
+	width: 100%;
+	height: 50%;
+}
+
+.element:nth-child(3) {
+	width: 100%;
+	height: 100%;
+}
+
+.element:nth-child(4) {
+	width: 100%;
+	height: 40%;
+}
+
+.element:nth-child(5) {
+	width: 20%;
+	height: 40%;
+}
+
+.element:nth-child(6) {
+	width: 20%;
+	height: 50%;
+}
+
 
 #elements_activites a {
 	height: 100%;
 	padding-left: 0px;
 	color: black;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
+} 
 
 .element{
-	width: 20%;
+	width: 100%;
 	border-radius: 15px 15px 15px 15px;
 	box-shadow: -1px -1px 15px 1px #D2D2D2;
 	padding-bottom: 20px;
 	overflow: hidden;
 }
 
-.element:nth-child(1) {
-	height: 100%;
-	align-self: flex-start;
-}
-
-.element:nth-child(2) {
-	height: 50%;
-	align-self: flex-start;
-}
-
-.element:nth-child(3) {
-	height: 40%;
-	align-self: flex-end;
-}
-
-.element:nth-child(4) {
-	height: 100%;
-	align-self: flex-start;
-}
-
-.element:nth-child(5) {
-	height: 40%;
-	align-self: flex-start;
-}
-
-.element:nth-child(6) {
-	height: 50%;
-	align-self: flex-end;
-}
 
 .bloc_activites_description {
 	width: 100%;
