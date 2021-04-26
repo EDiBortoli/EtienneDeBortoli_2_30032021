@@ -17,9 +17,8 @@ strong {
 #bloc_page {
 	font-family: "Raleway", Impact, sans-serif;
 	letter-spacing: 0px;
-	width: 97%;
 	max-width: 100vw;
-	padding-left: 3%;
+	padding: 0px 3%;
 }
 
 #bloc_page h2 {
@@ -35,9 +34,10 @@ a {
 /** HEADER **/
 
 header {
-	display: flex;
-	font-size: 0.9em;
-
+	display: grid;
+	grid-template-columns: 80px 1fr 130px;
+	grid-template-rows: auto;
+	align-items: flex-start;
 }
 	/* logo */
 
@@ -45,11 +45,11 @@ header {
 	width:70%;
 }
 
-#logo_reservia img{
+#logo_reservia img {
 	position: absolute;
-	width: 75px;
+	width: 80px;
 	height: auto;
-	margin-top: 20px;
+	top: 25px;
 }
 
 #inscription_mobile {
@@ -59,16 +59,19 @@ header {
 	/* nav */
 
 nav {
-	width: inherit;
-	height: 60px;
-	font-size: 0.9em;
+	display: flex;
+	flex-direction: row;
 }
 
 nav ul{
 	list-style-type: none;
-	display:flex;
-	margin-top: 0px;
-
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 60px;
+	font-size: 0.9em;
+	margin:0;
+	padding: 0;
 }
 
 nav li {
@@ -91,7 +94,6 @@ nav li:hover {
 }
 
 #inscription {
-	width: 130px;
 	padding-top: 30px;
 	text-align: center;
 }
@@ -117,7 +119,7 @@ nav li:hover {
 }
 
 #hebergement p {
-	font-size: 0.85em;
+	font-size: smaller;
 	margin-top: 15px;
 }
 
@@ -126,7 +128,7 @@ nav li:hover {
 #bloc_recherche {
 	display: flex;
 	align-items: center;
-	margin: 45px 0px 45px 0px;
+	margin: 25px 0px 20px 0px;
 	height: 45px;
 }
 
@@ -251,7 +253,8 @@ input {
 .bloc_info {
 	display: flex;
 	align-items: center;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
+	font-size: smaller;
 }
 
 .icone_info {
@@ -265,8 +268,8 @@ input {
 
 .icone_info i {
 	position: relative;
-	bottom: 60%;
-	left: 40%;
+	bottom: 50%;
+	left: 30%;
 }
 
 /* HEBERGEMENTS */
@@ -275,7 +278,7 @@ input {
 
 #resultat_hebergements {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: left;
 }
 
@@ -339,6 +342,15 @@ input {
 	border: 4px solid #FFFFFF;
 }
 
+.resultat_hebergement_description span {
+	padding-bottom: 5px;
+}
+
+.resultat_hebergement_description span strong {
+	font-weight: bolder;
+	font-size: 1em;
+}
+
 .resultat_hebergement img {
 	width: 100%;
 	height: auto;
@@ -374,7 +386,8 @@ input {
 #hebergements_populaires {
 	width: 100%;
 	justify-content: center;
-	max-width: 350px;
+	min-width: 200px;
+	max-width: 380px;
 	background-color: #F2F2F2;
 	margin:0px;
 	border-radius: 15px;
@@ -385,6 +398,19 @@ input {
 	padding-left: 20px;
 	margin-bottom: 0px;
 }
+
+.titre_icone {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.titre_icone i {
+	font-size: 17px;
+	padding-right: 25px;
+}
+
 
 #hebergements_populaires ul {
 	width: 100%;
@@ -430,6 +456,15 @@ input {
 	font-size: small;
 	margin-left: 40%;
 	padding: 10px 0px 0px 15px;
+}
+
+.bloc_populaire_description span {
+	padding-bottom: 15px;
+}
+
+.bloc_populaire_description span strong {
+	font-size: 1.05em;
+	font-weight: bolder;
 }
 
 .bloc_populaire_description .etoiles {
@@ -578,35 +613,76 @@ footer h1 {
 
 @media all and (max-device-width: 480px) {
 
+	body {
+		margin: 0px;
+	}
+
 	#bloc_page {
-		width: 400px;
-		padding: 0;
-		margin: 0;
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	section {
+		padding: 0px 15px;
+		margin: 0px 15px;
 	}
 
 	header {
-		display: inline;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 60px 60px;
+		align-items: center;
 	}
-
-	header div {
-		order: 1;
-	}
-
 
 	#logo_reservia {
-		float: left;
-		position: absolute;
-		margin-left: 0px;
+		order: 1;
+		padding-left: 20px;
 	}
 
-	#inscription_mobile {
-		display: block;
-		float: right;
-		margin-right: 0px;
+	#logo_reservia img {
+		width: 90px;
 	}
 
 	#inscription {
-		display: none;
+		order: 2;
+		padding: 40px 20px 0px 0px;
+		text-align: end;
+	}
+
+	nav {
+		grid-column: span 2;
+		order:3;
+		padding: 0px;
+		justify-content: space-around;
+	}
+
+	nav ul {
+		justify-content: center;
+		align-items: flex-end;
+		padding: 0px;
+	}
+
+	nav li {
+		width: 100%;
+		padding: 0px 0px 10px 0px;
+	}
+
+	nav li a:hover {
+		color: #0065FC;
+	}
+
+	nav li:hover {	
+		border-top: none;
+		border-bottom: 2px #0065FC solid;
+	}
+
+	#hebergement {
+		width: 100%;
+	}
+
+	#bloc_recherche {
+
 	}
 
 	#filtres {
@@ -625,19 +701,25 @@ footer h1 {
 	.icone_info {
 	}	
 
+	#resultat_hebergements {
+		justify-content: center;
+		margin: 0px;
+	}
+
 	#hebergements_populaires_mobile {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	background-color: #F2F2F2;
-	margin:0px;
-	border-radius: 0px;
-	padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-color: #F2F2F2;
+		margin:0px;
+		padding: 0px;
+		border-radius: 0px;
 	}
 
 	#hebergements_populaires_mobile ul {
 		list-style-type: none;
 		justify-content: flex-start;
+		padding: 0px;
 	}
 	
 
@@ -646,8 +728,89 @@ footer h1 {
 		display: none;
 	}
 
+	#hebergement_recherche {
+		width: 100%;
+		margin: 0px;
+		background-color: white;
+	}
+
+	#hebergement_recherche h2 {
+		width: 100%;
+		padding: 0px;
+	}
+
+	#hebergement_recherche ul {
+		width: 100%;
+		padding: 0px;
+	}
+
+	#hebergement_recherche li {
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin-right: 0px;
+		justify-content: left;
+	}
+
+	#hebergement_recherche p {
+		width: 100%;
+		padding: 0px;
+		margin-right: 0px;
+	}
+
+	#activites {
+			width: inherit;
+			height: auto;
+			justify-content: center;
+			padding-bottom: 40px;
+		}
+
+	#elements_activites {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		padding: 0px;
+	}
+
+	.element {
+		max-height: 200px;
+		margin: 0px;
+	}
+
+	.element a {
+		width: 100%;
+		max-height: 200px;
+		margin: 0px;
+	}
+
+	.element:nth-child(1) {
+		margin: 0px;
+	}
+	.element:nth-child(2) {
+		margin: 0px;
+	}
+	.element:nth-child(3) {
+		margin: 0px;
+	}
+	.element:nth-child(4) {
+		margin: 0px;
+	}
+	.element:nth-child(5) {
+		margin: 0px;
+	}
+	.element:nth-child(6) {
+		margin: 0px;
+	}
+
 	footer {
+	width: 100%;
 	flex-direction: column;
+	margin: 0px;
+	}
+
+	footer div {
+		padding: 10px 0px;
 	}
 
 }
