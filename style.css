@@ -23,6 +23,7 @@ strong {
 
 #bloc_page h2 {
 	font-size: 1.05em;
+	font-weight: 900;
 	margin-top: 30px;
 	margin-bottom: 0px;
 }
@@ -134,17 +135,12 @@ nav li:hover {
 #encart_recherche {
 	display: grid;
 	max-width: 250px;
-	grid-template-columns: 45px 1fr 20px;
-	grid-template-rows: 30px;
+	grid-template-columns: 45px 1fr 45px;
 	align-items: center;
 }
 
-#encart_recherche p{
-	height:50px;
-}
-
 #icone_marker {
-	border:3px #F2F2F2 solid;
+	border: 3px #F2F2F2 solid;
 	border-radius: 15px 0px 0px 15px;
 	background-color: #F2F2F2;
 	padding: 11px 15px 11px 15px;
@@ -158,41 +154,28 @@ nav li:hover {
 }
 
 input {
-	color:black;
 	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bolder; 
-	padding: 12px 0px 12px 10px;
+	padding: 13px 0px 13px 10px;
 
 }
 
 #bouton_recherche {
+	width: min-content;
 	background-color: #0065FC;
+	color: #FFFFFF;
 	padding: 14px 15px 14px 15px;
 	border-radius: 0px 15px 15px 0px;
 }
 
 #bouton_recherche a {
+	text-decoration: none;
 	color: white;
 }
 
 #icone_recherche {
 	display: none;
-}
-
-/*#icone_pointeur_recherche {
-	background-color: #F2F2F2;
-	width:50px;
-}*/
-
-#bouton_recherche {
-	background-color: #0065FC;
-	color: #FFFFFF;
-	width: 130px;
-}
-
-#bouton_recherche a{
-	text-decoration: none;
 }
 
 /* FILTRES */
@@ -306,7 +289,6 @@ input {
 	padding-left: 40px;
 	margin: 0;
 	font-size: 1.05em;
-	font-weight: bolder;
 }
 
 #hebergement_recherche ul {
@@ -353,7 +335,7 @@ input {
 }
 
 .resultat_hebergement_description span strong {
-	font-weight: bolder;
+	font-weight: 900;
 	font-size: 1em;
 }
 
@@ -638,6 +620,7 @@ footer h1 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 60px 60px;
+		grid-row-gap: 5px;
 		align-items: center;
 	}
 
@@ -671,7 +654,7 @@ footer h1 {
 
 	nav li {
 		width: 100%;
-		padding: 0px 0px 10px 0px;
+		padding: 0px 0px 15px 0px;
 	}
 
 	nav li a:hover {
@@ -688,7 +671,28 @@ footer h1 {
 	}
 
 	#bloc_recherche {
+		margin: 25px 20px 25px 20px;
+	}
 
+	#bouton_recherche {
+		border-radius: 15px 15px 15px 15px;
+	}
+
+	#bouton_recherche span {
+		display: none;
+	}
+
+	#encart_recherche {
+		max-width: 100%;
+	}
+
+	#champ_de_recherche {
+		margin-right: -10px;
+	}
+
+	#icone_recherche {
+		display: inline-block;
+		color: white;
 	}
 
 	#filtres {
@@ -702,9 +706,19 @@ footer h1 {
 
 	.bloc_info {
 		align-items: baseline;
+		font-size: medium;
 	}
 
 	.icone_info {
+		width: 15px;
+		height: 12px;
+		position: relative;
+		bottom: -3px;
+	}
+
+	.icone_info i {
+		font-size: 8px;
+		left: 40%;
 	}	
 
 	#resultat_hebergements {
@@ -729,11 +743,16 @@ footer h1 {
 		padding: 0px 0px 0px 10px;
 	}
 
+	#hebergements_populaires ul {
+		padding: 0px 0px 20px 0px;
+	}
+
 	#hebergement_recherche {
 		order:2;
 		width: 100%;
 		margin: 0px;
 		background-color: white;
+		padding: 0px 0px 30px 0px;
 	}
 
 	#hebergement_recherche h2 {
@@ -796,27 +815,34 @@ footer h1 {
 	}
 
 	.element:nth-child(1) {
+		margin: 0px 10px 10px 10px;
 	}
 
 	.element:nth-child(2) {
+		margin: 10px 10px 10px 10px;
 	}
 
 	.element:nth-child(3) {
+		margin: 10px 10px 10px 10px;
 	}
 
 	.element:nth-child(4) {
+		margin: 10px 10px 10px 10px;
 	}
 
 	.element:nth-child(5) {
+		margin: 10px 10px 10px 10px;
 	}
 
 	.element:nth-child(6) {
+		margin: 10px 10px 0px 10px;
 	}
 
 	footer {
 	width: 100%;
 	flex-direction: column;
 	margin: 0px;
+	padding: 20px 0px 0px 20px;
 	}
 
 	footer div {
