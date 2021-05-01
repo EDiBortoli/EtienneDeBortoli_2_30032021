@@ -884,7 +884,7 @@ footer h1 {
 	}
 
 	.titre p {
-		font-size: 1.05em;
+		font-size: 0.95em;
 		margin-top: 15px;
 	}
 
@@ -919,7 +919,6 @@ footer h1 {
 	}
 
 	#champ_de_recherche input {
-		width: 100%;
 		font-size: 1.2em;
 		border-radius: 0px 15px 15px 0px;
 		padding: 15px 20px 15px 15px;
@@ -940,7 +939,7 @@ footer h1 {
 
 	#filtres span {
 		padding-bottom: 0px;
-		padding: 15px 0;
+		padding: 15px 0 10px 0px;
 	}
 
 	#filtres span strong {
@@ -950,21 +949,24 @@ footer h1 {
 	#filtres ul {
 		padding: 0;
 		margin-bottom: 10px;
+		font-size: 1em;
 	}
 
 	#filtres li {
 		margin-right: 10px;
 		margin-bottom: 10px;
+		padding: 0 15px 0 0;
 	}
 
 	.icone_filtre {
 		width: 20px;
-		padding: 15px 15px 12px 12px;
+		padding: 14px 13px 11px 10px;
+		margin-right: 10px;
 	}
 
 	.bloc_info {
 		align-items: baseline;
-		font-size: 1.05em;
+		font-size: 0.95em;
 		margin-bottom: 15px;
 		padding: 0 25px;
 	}
