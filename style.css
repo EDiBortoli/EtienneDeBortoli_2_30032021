@@ -834,7 +834,7 @@ footer h1 {
 
 	#inscription {
 		order: 2;
-		padding: 40px 25px 0px 0px;
+		padding: 10px 10px 0px 0px;
 		text-align: end;
 	}
 
@@ -930,7 +930,7 @@ footer h1 {
 	#champ_de_recherche input {
 		font-size: 1.2em;
 		border-radius: 0px 15px 15px 0px;
-		padding: 15px 20px 15px 15px;
+		padding: 15px 60px 15px 15px;
 		box-shadow: none;
 	}
 
@@ -1051,7 +1051,7 @@ footer h1 {
 		width: 100%;
 		margin: 20px 0px 0px 0px;
 		background-color: white;
-		padding-bottom: 0px 25px 40px 25px;
+		padding: 0px 0px 30px 0px;
 	}
 
 	#hebergement_recherche h2 {
