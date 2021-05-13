@@ -810,6 +810,7 @@ footer h1 {
 
 	#bloc_page {
 		max-width: 100%;
+		min-width: 350px;
 		padding: 0px;
 		margin: 0px;
 	}
